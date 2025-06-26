@@ -1,0 +1,51 @@
+{
+    "development": {
+        "production": false,
+        "host": "43.254.162.114",
+        "dbIp": "43.254.162.114",
+        "dbPrivateIp": "10.139.128.212",
+        "port": 5000,
+        "db": "konspecCRMPB",
+        "connectionString": "mongodb://crmdevuser:crmdevuser@43.254.162.114:27017/konspecCRMPB",
+        "fileUploadPath": "/var/lib/jenkins/workspace/crm_backend/uploads/",
+        "notificationEmail": false,
+        "notificationPush": false,
+        "notificationFromAdds": "noreply@konspec.com"
+    },
+    "konspecDev": {
+        "production": false,
+        "host": "43.254.162.114",
+        "dbIp": "159.65.148.28",
+        "dbPrivateIp": "10.139.128.212",
+        "port": 5050,
+        "db": "konspecdevCRM",
+        "connectionString": "mongodb://konspecdevuser:qwerty123@10.139.128.212:27017/konspecdevCRM",
+        "fileUploadPath": "/var/lib/jenkins/workspace/crm_backend/uploads/",
+        "notificationEmail": true,
+        "notificationPush": false,
+        "notificationFromAdds": "noreply@konspec.com"
+    },
+    "production": {
+        "production": true,
+        "host": "52.172.29.112",
+        "dbIp": "52.172.29.112",
+        "dbPrivateIp": "10.0.1.4",
+        "port": 5000,
+        "db": "konspecCRM",
+        "connectionString": "mongodb://crmuser:crmuser123@10.0.1.4:27017/konspecCRM",
+        "fileUploadPath": "/home/crmadmin/crmapi/CRMBackend/uploads/",
+        "notificationEmail": true,
+        "notificationPush": false,
+        "notificationFromAdds": "noreply@konspec.com"
+    },
+    "local": {
+        "production": false,
+        "host": "43.254.162.114",
+        "port": 5000,
+        "db": "konspecCRM",
+        "connectionString": "mongodb://127.0.0.1:27017/konspecdevCRM",
+        "notificationEmail": true,
+        "notificationPush": false,
+        "notificationFromAdds": "noreply@konspec.com"
+    }
+}

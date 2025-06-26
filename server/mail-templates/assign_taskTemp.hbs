@@ -1,0 +1,558 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- If you delete this tag, the sky will fall on your head -->
+    <meta name="viewport" content="width=device-width" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ZURBemails</title>
+
+    <link rel="stylesheet" type="text/css" href="../../public/stylesheets/email.css" />
+<style>
+    /* ------------------------------------- 
+		GLOBAL 
+------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.collapse {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    width: 100%!important;
+    height: 100%;
+}
+
+
+/* ------------------------------------- 
+		ELEMENTS 
+------------------------------------- */
+
+a {
+    color: rgb(222, 233, 236);
+}
+
+.btn {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #666;
+    padding: 10px 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+}
+
+p.callout {
+    padding: 15px;
+    background-color: #ECF8FF;
+    margin-bottom: 15px;
+}
+
+.callout a {
+    font-weight: bold;
+    color: #2BA6CB;
+}
+
+table.crmData {
+    background-color: #939b99;
+    border: 1px solid #425b76;
+    border-radius: 5px;
+    font-size: 14px;
+    padding:15px; 
+    width: auto;
+    font-weight: bold
+}
+
+table.social {
+    /* 	padding:15px; */
+    background-color: #0c0c0c;
+}
+
+.social .soc-btn {
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+a.login{
+    background-color: rgb(17, 177, 155)!important;
+    border: 1px solid #425b76;
+    border-radius: 5px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 12px 20px;
+    text-decoration: none;
+    width: auto;
+    font-weight: bold;
+    {{!-- min-width: 170px; --}}
+}
+
+a.fb {
+    background-color: #3B5998!important;
+}
+
+a.tw {
+    background-color: #1daced!important;
+}
+
+a.gp {
+    background-color: rgb(238, 34, 12)!important;
+}
+
+a.ms {
+    background-color: rgb(140, 240, 9)!important;
+}
+
+.sidebar .soc-btn {
+    display: block;
+    width: 100%;
+}
+
+
+/* ------------------------------------- 
+		HEADER 
+------------------------------------- */
+
+table.head-wrap {
+    width: 100%;
+}
+
+.header.container table td.logo {
+    padding: 15px;
+}
+
+.header.container table td.label {
+    padding: 15px;
+    padding-left: 0px;
+}
+
+
+/* ------------------------------------- 
+		BODY 
+------------------------------------- */
+
+table.body-wrap {
+    width: 100%;
+}
+
+
+/* ------------------------------------- 
+		FOOTER 
+------------------------------------- */
+
+table.footer-wrap {
+    width: 100%;
+    clear: both!important;
+}
+
+.footer-wrap .container td.content p {
+    border-top: 1px solid rgb(84, 245, 10);
+    padding-top: 15px;
+}
+
+.footer-wrap .container td.content p {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* ------------------------------------- 
+		TYPOGRAPHY 
+------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: rgb(235, 133, 133);
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+    font-size: 60%;
+    color: #023ef1;
+    line-height: 0;
+    text-transform: none;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 44px;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 37px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 27px;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 23px;
+}
+
+h5 {
+    font-weight: 900;
+    font-size: 17px;
+}
+
+h6 {
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgb(239, 59, 245);
+}
+
+.collapse {
+    margin: 0!important;
+}
+
+p,
+ul {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+p.lead {
+    font-size: 17px;
+    color: rgb(5, 5, 5)
+}
+
+p.last {
+    margin-bottom: 0px;
+    color: rgb(69, 245, 186)
+}
+
+ul li {
+    margin-left: 5px;
+    list-style-position: inside;
+}
+
+
+/* ------------------------------------- 
+		SIDEBAR 
+------------------------------------- */
+
+ul.sidebar {
+    background: #eec659;
+    display: block;
+    list-style-type: none;
+}
+
+ul.sidebar li {
+    display: block;
+    margin: 0;
+}
+
+ul.sidebar li a {
+    text-decoration: none;
+    color: rgb(227, 15, 247);
+    padding: 10px 16px;
+    /* 	font-weight:bold; */
+    margin-right: 10px;
+    /* 	text-align:center; */
+    cursor: pointer;
+    border-bottom: 1px solid #777777;
+    border-top: 1px solid #FFFFFF;
+    display: block;
+    margin: 0;
+}
+
+ul.sidebar li a.last {
+    border-bottom-width: 0px;
+}
+
+ul.sidebar li a h1,
+ul.sidebar li a h2,
+ul.sidebar li a h3,
+ul.sidebar li a h4,
+ul.sidebar li a h5,
+ul.sidebar li a h6,
+ul.sidebar li a p {
+    margin-bottom: 0!important;
+}
+
+
+/* --------------------------------------------------- 
+		RESPONSIVENESS
+		Nuke it from orbit. It's the only way to be sure. 
+------------------------------------------------------ */
+
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+
+.container {
+    display: block!important;
+    max-width: 600px!important;
+    margin: 0 auto!important;
+    /* makes it centered */
+    clear: both!important;
+}
+
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+
+.content {
+    padding: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* Let's make sure tables in the content area are 100% wide */
+
+.content table {
+    width: 100%;
+}
+
+
+/* Odds and ends */
+
+.column {
+    width: 300px;
+    float: left;
+}
+
+.column tr td {
+    padding: 15px;
+}
+
+.column-wrap {
+    padding: 0!important;
+    margin: 0 auto;
+    max-width: 600px!important;
+}
+
+.column table {
+    width: 100%;
+}
+
+.social .column {
+    width: 280px;
+    min-width: 279px;
+    float: left;
+}
+
+
+/* Be sure to place a .clear element after each set of columns, just to be safe */
+
+.clear {
+    display: block;
+    clear: both;
+}
+
+
+/* ------------------------------------------- 
+		PHONE
+		For clients that support media queries.
+		Nothing fancy. 
+-------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+    a[class="btn"] {
+        display: block!important;
+        margin-bottom: 10px!important;
+        background-image: none!important;
+        margin-right: 0!important;
+    }
+    div[class="column"] {
+        width: auto!important;
+        float: none!important;
+    }
+    table.social div[class="column"] {
+        width: auto!important;
+    }
+}
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+    <!-- HEADER -->
+    <table width="100%" class="head-wrap" {{!-- bgcolor="#999999" --}}>
+        <tr>
+            <td class="header container">
+                <div class="">
+                    <table {{!-- bgcolor="#999999" --}}>
+                        <tr>
+                            {{!-- <td><img src="{{urls.companyLogo}}" /></td> --}}
+                            {{!-- <td align="right">
+                                <h6 class="collapse">Hero</h6>
+                            </td> --}}
+                        </tr>
+                    </table>
+                </div>
+
+            </td>
+        </tr>
+    </table>
+    <!-- /HEADER -->
+
+
+    <!-- BODY -->
+    <table class="body-wrap">
+        <tr>
+            <td></td>
+            <td class="container" bgcolor="#FFFFFF">
+
+                <div class="content">
+                    <table>
+                        <tr>
+                            <td>
+
+                                <h3 style="text-align: center;color:rgb(6, 104, 143);font-weight:bolder;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">You've been assigned to a New Task</h3>
+                                {{!-- <p class="lead">This is simple text. paste here some text.</p> --}}
+                                {{!-- <p ><center><img src="{{urls.logo}}" /></center></p> --}}
+                                
+                                <!-- A Real Hero (and a real human being) -->
+                                {{!-- <p><img src="http://placehold.it/600x300" /></p> --}}
+                                    <table class="crmData" style="color: beige">
+                                    <tr><td><strong>Task Name: </strong></td><td>{{Task_name}}</td></tr>
+                                    <tr><td><strong>Due Date: </strong></td><td>{{Due_date}}</td></tr>
+                                    <tr><td><strong>Created By: </strong></td><td>{{Created_By}}</td></tr>
+                                    <tr><td><strong>Created On: </strong></td><td>{{Created_at}}</td></tr>
+                                </table>
+                                <!-- /hero -->
+
+                                <!-- Callout Panel -->
+                                <br>
+                                <p class="lead">
+                                   {{!-- <center><a class="soc-btn login" href={{urls.loginCRM}}>View in Seven CRM &raquo;</a></center> --}}
+                                </p>
+                                <!-- /Callout Panel -->
+
+                                {{!-- <h3>Title Title <small>This is a note.</small></h3>
+                                <p class="lead">it is test text. just simply types blah blahit is test text. 
+                                    just simply types blah blahit is test text. 
+                                    just simply types blah blahit is test text. 
+                                    just simply types blah blahit is test text. 
+                                    just simply types blah blah</p>
+                                <a class="btn">Click Me!</a> --}}
+
+                                <br/>
+                                <br/>
+                                
+                                <!-- social & contact -->
+                                <table class="social" width="100%">
+                                    <tr>
+                                        <td>
+
+                                            <!--- column 1 -->
+                                            {{!-- <table align="left" class="column">
+                                                <tr>
+                                                    <td>
+
+                                                        <h5 class="">Connect with Us:</h5>
+                                                        <p class=""><a href="#" class="soc-btn fb">Facebook</a> <a href="#" class="soc-btn tw">Twitter</a> <a href="#" class="soc-btn gp">Google+</a></p>
+
+
+                                                    </td>
+                                                </tr>
+                                            </table> --}}
+                                            <!-- /column 1 -->
+
+                                            <!--- column 2 -->
+                                            {{!-- <table align="left" class="column">
+                                                <tr>
+                                                    <td>
+
+                                                        <h5 class="">Contact Info:</h5>
+                                                        <p>Phone: <strong>408.341.0600</strong><br/> Email: <strong><a href="emailto:hseldon@trantor.com">hseldon@trantor.com</a></strong></p>
+
+                                                    </td>
+                                                </tr>
+                                            </table> --}}
+                                            <!-- /column 2 -->
+
+                                            <span class="clear"></span>
+
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- /social & contact -->
+
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <!-- /BODY -->
+
+    <!-- FOOTER -->
+    <table class="footer-wrap">
+        <tr>
+            <td></td>
+            <td class="container">
+
+                <!-- content -->
+                <div class="content">
+                    {{!-- <table>
+                        <tr>
+                            <td align="center">
+                                <p>
+                                    <a href="#">Terms</a> |
+                                    <a href="#">Privacy</a> |
+                                    <a href="#">
+                                        <unsubscribe>Unsubscribe</unsubscribe>
+                                    </a>
+                                </p>
+                            </td>
+                        </tr>
+                    </table> --}}
+                </div>
+                <!-- /content -->
+
+            </td>
+            <td></td>
+        </tr>
+    </table>
+    <!-- /FOOTER -->
+
+</body>
+
+</html>
