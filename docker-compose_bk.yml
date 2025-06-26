@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  backend:
+    image: crm-backend
+    container_name: crm-backend
+    build:
+      context: .
+    network_mode: "host"
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    volumes:
+      - .env:/app/.env
+      - ${FILE_UPLOAD_PATH}:${FILE_UPLOAD_PATH}
+    restart: unless-stopped

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: crm-backend-prod
+    build:
+      context: .
+    image: crm-backend-prod
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env.production
+    volumes:
+      - .:/app
+      - ${FILE_UPLOAD_PATH}:${FILE_UPLOAD_PATH}
+    restart: unless-stopped

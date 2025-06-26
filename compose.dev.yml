@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  backend:
+    container_name: crm-backend-dev
+    build:
+      context: .
+    image: crm-backend-dev
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env.dev
+    volumes:
+      - .:/app
+      - ${FILE_UPLOAD_PATH}:${FILE_UPLOAD_PATH}
+    restart: unless-stopped

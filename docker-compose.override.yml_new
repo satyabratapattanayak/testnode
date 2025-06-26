@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  backend:
+    image: crm-backend
+    container_name: crm-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env.server
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:4.4
+    container_name: crm-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+
+volumes:
+  mongo_data:
